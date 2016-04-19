@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost/dsd</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">admin</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+		    <property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+		<!-- Drop and re-create the database schema on startup -->
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+		<mapping class="mx.ipn.escom.dsd.rmi.server.modelo.GradoAcademico"></mapping>
+		<mapping class="mx.ipn.escom.dsd.rmi.server.modelo.Profesor"></mapping>
+		<mapping class="mx.ipn.escom.dsd.rmi.server.modelo.Perfil"></mapping>
+		<mapping class="mx.ipn.escom.dsd.rmi.server.modelo.Cuenta"></mapping>
+	</session-factory>
+
+</hibernate-configuration>
